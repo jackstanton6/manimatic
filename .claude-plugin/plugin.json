@@ -1,0 +1,13 @@
+{
+  "name": "manimatic",
+  "version": "0.2.0",
+  "description": "Turn a narrated maths script and its voice recording into a finished 3Blue1Brown-style Manim video: transcription, retake and flub cutting, an editable PLAN.md, generated Manim scenes, music, captions and chapters.",
+  "author": {
+    "name": "Jack Stanton",
+    "url": "https://github.com/jackstanton6"
+  },
+  "homepage": "https://github.com/jackstanton6/manimatic",
+  "repository": "https://github.com/jackstanton6/manimatic",
+  "license": "GPL-3.0-or-later",
+  "keywords": ["manim", "maths", "math", "animation", "video", "narration", "whisper", "education", "3blue1brown"]
+}

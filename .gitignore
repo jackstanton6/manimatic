@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.venv/
+/dist/
+/build/
+# generated inside projects
+**/.manimatic/media/
+**/.manimatic/render/
+**/.manimatic/logs/
+**/.manimatic/frames/
+**/.manimatic/audio/
+**/output/

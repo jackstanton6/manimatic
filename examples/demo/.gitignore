@@ -1,0 +1,6 @@
+.manimatic/media/
+.manimatic/render/
+.manimatic/logs/
+.manimatic/frames/
+.manimatic/audio/
+output/*.wav

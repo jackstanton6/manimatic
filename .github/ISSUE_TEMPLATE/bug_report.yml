@@ -1,0 +1,50 @@
+name: Bug report
+description: Something went wrong while making a video
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting! The more of the details below you can give, the faster this gets fixed.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Stage
+      options:
+        - Setup (doctor / install)
+        - Transcription or audio editing (cuts, retakes, pauses)
+        - PLAN.md
+        - References (finding or cropping questions)
+        - Rendering (scenes, LaTeX, checks)
+        - Music, captions or chapters
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Output of `mm.py doctor`
+      description: Run `python3 mm.py doctor` (Windows `py -3 mm.py doctor`) from the plugin folder, or ask Claude to run it, and paste the result.
+      render: text
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error messages or logs
+      description: For a failed render, the end of `.manimatic/logs/<scene>.<quality>.log`.
+      render: text
+  - type: textarea
+    id: transcript
+    attributes:
+      label: Audio problems
+      description: For alignment or cut problems, attaching the `.manimatic/asr/*.json` transcript cache (word timings only, no audio) plus the script helps most. Only share what you're happy to make public.
+  - type: input
+    id: os
+    attributes:
+      label: OS and Python version
+      placeholder: macOS 15, Python 3.12

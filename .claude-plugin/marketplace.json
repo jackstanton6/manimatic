@@ -1,0 +1,26 @@
+{
+  "name": "manimatic",
+  "owner": {
+    "name": "Jack Stanton",
+    "url": "https://github.com/jackstanton6"
+  },
+  "metadata": {
+    "description": "Manimatic: narration-driven Manim maths videos for Claude Code."
+  },
+  "plugins": [
+    {
+      "name": "manimatic",
+      "source": "./",
+      "description": "Narrated maths script + voice recording in, finished 3Blue1Brown-style Manim video out.",
+      "version": "0.2.0",
+      "author": {
+        "name": "Jack Stanton",
+        "url": "https://github.com/jackstanton6"
+      },
+      "homepage": "https://github.com/jackstanton6/manimatic",
+      "repository": "https://github.com/jackstanton6/manimatic",
+      "license": "GPL-3.0-or-later",
+      "category": "productivity"
+    }
+  ]
+}

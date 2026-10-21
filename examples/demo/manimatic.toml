@@ -1,0 +1,56 @@
+# Manimatic project settings. Most presentation settings (title, quality, captions,
+# voice processing) can also be changed in PLAN.md, which takes precedence.
+
+[project]
+title = "Why Primes Matter"
+author = ""
+
+[video]
+quality = "1080p60"          # 1080p60 | 1440p60 | 2160p60 (4k)
+background = "#000000"
+
+[audio]
+files = []                   # empty = every file in audio/ in natural order (take2 before take10)
+language = "en"
+asr_backend = "auto"         # auto | faster-whisper | whisperx
+asr_model = "auto"           # auto = large-v3 on an NVIDIA GPU, small.en on CPU
+device = "auto"              # auto | cuda | cpu
+
+[cuts]
+retakes = true               # keep only the last complete take of each line
+flubs = true
+fillers = true               # ums/uhs and untranscribed sounds in pauses
+adlibs = "keep"              # keep | cut   (always listed in PLAN.md for you to decide)
+max_pause = 0.5              # pauses longer than this are shortened...
+inner_pause = 0.25           # ...to this inside a sentence
+sentence_pause = 0.4         # ...to this between sentences
+paragraph_pause = 0.75       # ...to this between paragraphs
+
+[voice]
+process = false              # light noise reduction / EQ / compression (only if you want it)
+
+[music]                      # files are auto-detected in music/: bed*, intro*, outro*
+bed_level = -20              # bed loudness vs the voice, in LU (measured, so any mastering level works)
+bed_start = 0                # skip this many seconds of the bed (a quiet intro, say)
+# bed_level_db = -24         # uncomment to use a fixed gain instead of measuring
+duck_db = 10
+loudness_lufs = -14
+true_peak_db = -1.0
+
+[cards]
+intro_min = 3.0
+end_min = 5.0
+end_title = "Thanks for watching"
+end_lines = []
+
+[captions]
+burn_in = false
+max_chars = 42
+
+[render]
+engine = "manimgx"           # manimgx (fast, GPU) | manim (Manim CE fallback, needs LaTeX)
+jobs = 0                     # render processes; 0 = automatic
+
+[draft]
+tts = "auto"                 # auto | pyttsx3 | silent
+rate_wpm = 160

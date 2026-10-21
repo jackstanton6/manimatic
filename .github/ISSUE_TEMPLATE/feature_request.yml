@@ -1,0 +1,19 @@
+name: Feature request
+description: Suggest an idea for Manimatic
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The video or workflow you have in mind, and what gets in the way today.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help?
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Anything you've tried instead?
